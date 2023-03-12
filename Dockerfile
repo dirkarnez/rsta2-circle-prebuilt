@@ -1,13 +1,11 @@
 FROM armswdev/arm-tools:bare-metal-compilers
 
-# USER docker
-USER ubuntu
-
-RUN apt-get update -y && \
-   apt-get upgrade -y && \
-   apt-get -y --no-install-recommends install \
-   zip \
-   unzip
+RUN sudo rm /var/lib/apt/lists/lock && \
+	sudo apt-get update -y && \
+	sudo apt-get upgrade -y && \
+	sudo apt-get -y --no-install-recommends install \
+	zip \
+	unzip
    
 RUN mkdir -p /src/workspace
 
