@@ -1,11 +1,11 @@
 FROM armswdev/arm-tools:bare-metal-compilers
 
 # USER docker
-ENV USER=ubuntu
+USER ubuntu
 
 RUN apt-get update -y && \
    apt-get upgrade -y && \
-   apt-get -y --no-install-recommends --allow-unauthenticated install \
+   apt-get -y --no-install-recommends install \
    zip \
    unzip
    
