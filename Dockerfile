@@ -5,11 +5,8 @@ RUN apt-get update -y && \
    apt-get upgrade -y && \
    apt-get -y --no-install-recommends --allow-unauthenticated install \
    zip \
-   unzip \
-   && \
-   apt-get clean && \
-   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
+   unzip
+   
 RUN mkdir -p /src/workspace
 
 VOLUME /src/workspace
