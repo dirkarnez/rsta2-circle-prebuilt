@@ -7,7 +7,7 @@ RUN sudo rm /var/lib/apt/lists/lock && \
 	zip \
 	unzip
    
-RUN mkdir -p /src/workspace
+RUN sudo mkdir -p /src/workspace
 
 VOLUME /src/workspace
 
