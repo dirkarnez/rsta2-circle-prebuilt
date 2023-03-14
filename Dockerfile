@@ -18,5 +18,7 @@ CMD cd /src/workspace && \
 	./configure --raspberrypi 4 --realtime --prefix aarch64-none-elf- --multicore --c++17 && \
 	./makeall clean && \
 	./makeall && \
+	cd addon/lvgl && make && cd sample && make && \
+	cd /src/workspace/circle && \
 	zip --symlinks -r circle-step45.1.zip . && \
 	exit
